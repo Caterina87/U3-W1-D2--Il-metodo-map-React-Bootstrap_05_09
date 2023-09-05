@@ -1,12 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import TopBar from "./components/TopBar";
+import MyFooter from "./components/MyFooter";
+import Welcome from "./components/Welcome";
+import AllBooks from "./components/AllBooks";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <TopBar prop="React Library" />
-    </div>
+      <Welcome />
+      <AllBooks />
+      <MyFooter />
+    </Container>
   );
 }
 
