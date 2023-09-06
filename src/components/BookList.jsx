@@ -1,10 +1,12 @@
 import { Card, Col, Row, Button } from "react-bootstrap";
-import fantasy from "../Data/books/fantasy.json";
+import SingleBook from "./SingleBook";
+import scifi from "../Data/books/scifi.json";
 
-const AllBooks = () => {
+const BookList = () => {
   return (
     <Row>
-      {fantasy.map((book) => {
+      {scifi.map((book, index) => {
+        <SingleBook key={index} book={book} />;
         return (
           <Col xs={6} md={3} key={book.asin}>
             <Card>
@@ -22,4 +24,4 @@ const AllBooks = () => {
   );
 };
 
-export default AllBooks;
+export default BookList;
